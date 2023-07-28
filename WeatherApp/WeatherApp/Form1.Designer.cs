@@ -37,6 +37,7 @@
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.labelDesc = new System.Windows.Forms.Label();
             this.FLPForecast = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelDayOfWeek = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // changeLocButton
             // 
             this.changeLocButton.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.changeLocButton.Location = new System.Drawing.Point(12, 40);
+            this.changeLocButton.Location = new System.Drawing.Point(12, 38);
             this.changeLocButton.Name = "changeLocButton";
             this.changeLocButton.Size = new System.Drawing.Size(118, 23);
             this.changeLocButton.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             this.labelCity.AutoSize = true;
             this.labelCity.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelCity.Location = new System.Drawing.Point(224, 166);
+            this.labelCity.Location = new System.Drawing.Point(229, 167);
             this.labelCity.Name = "labelCity";
             this.labelCity.Size = new System.Drawing.Size(129, 26);
             this.labelCity.TabIndex = 2;
@@ -74,8 +75,7 @@
             // pictureBoxIcon
             // 
             this.pictureBoxIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxIcon.Location = new System.Drawing.Point(239, 99);
+            this.pictureBoxIcon.Location = new System.Drawing.Point(245, 99);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
             this.pictureBoxIcon.Size = new System.Drawing.Size(100, 64);
             this.pictureBoxIcon.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             this.labelTemp.AutoSize = true;
             this.labelTemp.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTemp.Location = new System.Drawing.Point(258, 192);
+            this.labelTemp.Location = new System.Drawing.Point(243, 192);
             this.labelTemp.Name = "labelTemp";
             this.labelTemp.Size = new System.Drawing.Size(62, 26);
             this.labelTemp.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             // textBoxCity
             // 
-            this.textBoxCity.Location = new System.Drawing.Point(12, 11);
+            this.textBoxCity.Location = new System.Drawing.Point(12, 9);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.PlaceholderText = "City name:";
             this.textBoxCity.Size = new System.Drawing.Size(118, 23);
@@ -103,7 +103,7 @@
             // 
             this.labelDesc.AutoSize = true;
             this.labelDesc.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelDesc.Location = new System.Drawing.Point(239, 67);
+            this.labelDesc.Location = new System.Drawing.Point(230, 67);
             this.labelDesc.Name = "labelDesc";
             this.labelDesc.Size = new System.Drawing.Size(61, 29);
             this.labelDesc.TabIndex = 6;
@@ -112,16 +112,28 @@
             // FLPForecast
             // 
             this.FLPForecast.BackColor = System.Drawing.Color.Transparent;
-            this.FLPForecast.Location = new System.Drawing.Point(12, 234);
+            this.FLPForecast.Location = new System.Drawing.Point(31, 233);
             this.FLPForecast.Name = "FLPForecast";
-            this.FLPForecast.Size = new System.Drawing.Size(560, 115);
+            this.FLPForecast.Size = new System.Drawing.Size(524, 116);
             this.FLPForecast.TabIndex = 7;
+            // 
+            // labelDayOfWeek
+            // 
+            this.labelDayOfWeek.AutoSize = true;
+            this.labelDayOfWeek.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDayOfWeek.Location = new System.Drawing.Point(424, 38);
+            this.labelDayOfWeek.Name = "labelDayOfWeek";
+            this.labelDayOfWeek.Size = new System.Drawing.Size(61, 26);
+            this.labelDayOfWeek.TabIndex = 8;
+            this.labelDayOfWeek.Text = "Time:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.Tan;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.labelDayOfWeek);
             this.Controls.Add(this.FLPForecast);
             this.Controls.Add(this.labelDesc);
             this.Controls.Add(this.textBoxCity);
@@ -130,6 +142,7 @@
             this.Controls.Add(this.labelCity);
             this.Controls.Add(this.changeLocButton);
             this.Controls.Add(this.timeLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -151,5 +164,6 @@
         private TextBox textBoxCity;
         private Label labelDesc;
         private FlowLayoutPanel FLPForecast;
+        private Label labelDayOfWeek;
     }
 }

@@ -57,7 +57,7 @@
             // 
             this.labelTempUC.AutoSize = true;
             this.labelTempUC.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTempUC.Location = new System.Drawing.Point(109, 45);
+            this.labelTempUC.Location = new System.Drawing.Point(101, 45);
             this.labelTempUC.Name = "labelTempUC";
             this.labelTempUC.Size = new System.Drawing.Size(56, 23);
             this.labelTempUC.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             this.labelDescUC.AutoSize = true;
             this.labelDescUC.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelDescUC.Location = new System.Drawing.Point(109, 68);
+            this.labelDescUC.Location = new System.Drawing.Point(101, 68);
             this.labelDescUC.Name = "labelDescUC";
             this.labelDescUC.Size = new System.Drawing.Size(48, 23);
             this.labelDescUC.TabIndex = 3;
@@ -82,7 +82,7 @@
             this.Controls.Add(this.labelTimeUC);
             this.Controls.Add(this.pictureBoxIconUC);
             this.Name = "UserControlForecast";
-            this.Size = new System.Drawing.Size(185, 119);
+            this.Size = new System.Drawing.Size(167, 119);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconUC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

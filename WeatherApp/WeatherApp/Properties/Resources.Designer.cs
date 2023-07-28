@@ -59,5 +59,15 @@ namespace WeatherApp.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8dbfa8a61db5075a221d47f848da1a5b {
+            get {
+                object obj = ResourceManager.GetObject("8dbfa8a61db5075a221d47f848da1a5b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

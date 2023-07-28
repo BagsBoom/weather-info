@@ -31,10 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timeLabel = new System.Windows.Forms.Label();
             this.changeLocButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.labelCity = new System.Windows.Forms.Label();
+            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
+            this.labelTemp = new System.Windows.Forms.Label();
+            this.textBoxCity = new System.Windows.Forms.TextBox();
+            this.labelDesc = new System.Windows.Forms.Label();
+            this.FLPForecast = new System.Windows.Forms.FlowLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // timeLabel
@@ -50,7 +53,7 @@
             // changeLocButton
             // 
             this.changeLocButton.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.changeLocButton.Location = new System.Drawing.Point(12, 9);
+            this.changeLocButton.Location = new System.Drawing.Point(12, 40);
             this.changeLocButton.Name = "changeLocButton";
             this.changeLocButton.Size = new System.Drawing.Size(118, 23);
             this.changeLocButton.TabIndex = 1;
@@ -58,51 +61,81 @@
             this.changeLocButton.UseVisualStyleBackColor = true;
             this.changeLocButton.Click += new System.EventHandler(this.changeLocButton_Click);
             // 
-            // label1
+            // labelCity
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(219, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "City, Country";
+            this.labelCity.AutoSize = true;
+            this.labelCity.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelCity.Location = new System.Drawing.Point(224, 166);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(129, 26);
+            this.labelCity.TabIndex = 2;
+            this.labelCity.Text = "City, Country";
             // 
-            // pictureBox1
+            // pictureBoxIcon
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(234, 92);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxIcon.Location = new System.Drawing.Point(239, 99);
+            this.pictureBoxIcon.Name = "pictureBoxIcon";
+            this.pictureBoxIcon.Size = new System.Drawing.Size(100, 64);
+            this.pictureBoxIcon.TabIndex = 3;
+            this.pictureBoxIcon.TabStop = false;
             // 
-            // label2
+            // labelTemp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(253, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 26);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Temp";
+            this.labelTemp.AutoSize = true;
+            this.labelTemp.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTemp.Location = new System.Drawing.Point(258, 192);
+            this.labelTemp.Name = "labelTemp";
+            this.labelTemp.Size = new System.Drawing.Size(62, 26);
+            this.labelTemp.TabIndex = 4;
+            this.labelTemp.Text = "Temp";
+            // 
+            // textBoxCity
+            // 
+            this.textBoxCity.Location = new System.Drawing.Point(12, 11);
+            this.textBoxCity.Name = "textBoxCity";
+            this.textBoxCity.PlaceholderText = "City name:";
+            this.textBoxCity.Size = new System.Drawing.Size(118, 23);
+            this.textBoxCity.TabIndex = 5;
+            // 
+            // labelDesc
+            // 
+            this.labelDesc.AutoSize = true;
+            this.labelDesc.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDesc.Location = new System.Drawing.Point(239, 67);
+            this.labelDesc.Name = "labelDesc";
+            this.labelDesc.Size = new System.Drawing.Size(61, 29);
+            this.labelDesc.TabIndex = 6;
+            this.labelDesc.Text = "Desc";
+            // 
+            // FLPForecast
+            // 
+            this.FLPForecast.BackColor = System.Drawing.Color.Transparent;
+            this.FLPForecast.Location = new System.Drawing.Point(12, 234);
+            this.FLPForecast.Name = "FLPForecast";
+            this.FLPForecast.Size = new System.Drawing.Size(560, 115);
+            this.FLPForecast.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.FLPForecast);
+            this.Controls.Add(this.labelDesc);
+            this.Controls.Add(this.textBoxCity);
+            this.Controls.Add(this.labelTemp);
+            this.Controls.Add(this.pictureBoxIcon);
+            this.Controls.Add(this.labelCity);
             this.Controls.Add(this.changeLocButton);
             this.Controls.Add(this.timeLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weather Info";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,8 +145,11 @@
 
         private Label timeLabel;
         private Button changeLocButton;
-        private Label label1;
-        private PictureBox pictureBox1;
-        private Label label2;
+        private Label labelCity;
+        private PictureBox pictureBoxIcon;
+        private Label labelTemp;
+        private TextBox textBoxCity;
+        private Label labelDesc;
+        private FlowLayoutPanel FLPForecast;
     }
 }

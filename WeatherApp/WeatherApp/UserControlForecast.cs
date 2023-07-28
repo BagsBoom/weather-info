@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WeatherApp
 {
-    public partial class ChangeLocForm : Form
+    public partial class UserControlForecast : UserControl
     {
-        public ChangeLocForm()
+        public UserControlForecast()
         {
             InitializeComponent();
         }
